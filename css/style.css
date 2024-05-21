@@ -11,13 +11,16 @@ Dark green: #28b485
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  font-size: 10px; /*now it means 1rem =10px*/
+}
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  padding: 30px;
+  padding: 3rem; /* = 30px */
 }
 .header {
   height: 95vh;
@@ -34,11 +37,11 @@ body {
 }
 .logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem; /* = 40px */
+  left: 4rem; /* = 40px */
 }
 .logo {
-  height: 35px;
+  height: 3.5rem; /* = 35px */
 }
 .text-box {
   position: absolute;
@@ -50,14 +53,14 @@ body {
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin-bottom: 6rem; /* = 60px */
   backface-visibility: hidden; /*  we use it in complex 3D Animations */
 }
 .heading-primary-main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem; /* = 60px */
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem; /* = 35px */
   animation-name: moveToRight;
   animation-duration: 1s;
   animation-timing-function: ease-out;
@@ -67,19 +70,19 @@ body {
 }
 .heading-primary-sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem; /* = 20px */
   font-weight: 700;
-  letter-spacing: 17.4px;
+  letter-spacing: 1.75rem; /* = 17.4px */
   animation-name: moveToLeft;
   animation-duration: 1s;
 }
 @keyframes moveToRight {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
   100% {
     opacity: 1;
@@ -89,10 +92,10 @@ body {
 @keyframes moveToLeft {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
   100% {
     opacity: 1;
@@ -103,7 +106,7 @@ body {
 @keyframes moveToBottom {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(3rem);
   }
 
   100% {
@@ -115,19 +118,19 @@ body {
 .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
 }
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 .btn-white {
   color: #777;
@@ -140,7 +143,7 @@ body {
   height: 100%;
   position: absolute;
   z-index: -1;
-  border-radius: 100px;
+  border-radius: 10rem;
   left: 0;
   top: 0;
   transition: all 0.4s;
@@ -154,6 +157,6 @@ body {
   opacity: 0;
 }
 .btn-animated {
-  animation: moveToBottom 0.5s ease-out .5s;
+  animation: moveToBottom 0.5s ease-out 0.5s;
   animation-fill-mode: backwards;
 }
