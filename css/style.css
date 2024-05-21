@@ -6,13 +6,16 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit; /* we will put it instead in body to apply inheritance */
 }
 html {
-  font-size: 10px; /*now it means 1rem =10px*/
+  font-size: 62.5%; /*now it means 10/16*100 1rem =10px from 16px the default measure of the browser*/
+  /* font-size: 10px; now it means 1rem =10px */
 }
 body {
   font-family: "Lato", sans-serif;
@@ -21,6 +24,7 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem; /* = 30px */
+  box-sizing: border-box; /*to apply inheritance */
 }
 .header {
   height: 95vh;
@@ -123,6 +127,7 @@ body {
   border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
+  font-size: 1.6rem;
 }
 .btn:hover {
   transform: translateY(-3px);
