@@ -45,11 +45,13 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-  /* backface-visibility: hidden;  we use it in complex 3D Animations */
+  margin-bottom: 60px;
+  backface-visibility: hidden; /*  we use it in complex 3D Animations */
 }
 .heading-primary-main {
   display: block;
@@ -96,4 +98,62 @@ body {
     opacity: 1;
     transform: translate(0);
   }
+}
+
+@keyframes moveToBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: relative;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-white {
+  color: #777;
+  background-color: #fff;
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 100px;
+  left: 0;
+  top: 0;
+  transition: all 0.4s;
+}
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.btn-animated {
+  animation: moveToBottom 0.5s ease-out .5s;
+  animation-fill-mode: backwards;
 }
