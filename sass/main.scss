@@ -37,22 +37,25 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
+
+  &__logo-box{
+    position: absolute;
+    top: 4rem; /* = 40px */
+    left: 4rem; /* = 40px */
+  }
+
+  &__logo {
+    height: 3.5rem; /* = 35px */
+  }
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 }
-.header__logo-box {
-  position: absolute;
-  top: 4rem; /* = 40px */
-  left: 4rem; /* = 40px */
-}
-.header__logo {
-  height: 3.5rem; /* = 35px */
-}
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
+
 .heading-primary {
   color: $color-white;
   text-transform: uppercase;
