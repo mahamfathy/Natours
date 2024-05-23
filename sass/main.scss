@@ -38,7 +38,7 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
 
-  &__logo-box{
+  &__logo-box {
     position: absolute;
     top: 4rem; /* = 40px */
     left: 4rem; /* = 40px */
@@ -61,27 +61,32 @@ body {
   text-transform: uppercase;
   margin-bottom: 6rem; /* = 60px */
   backface-visibility: hidden; /*  we use it in complex 3D Animations */
+
+  &--main {
+    display: block;
+    font-size: 6rem; /* = 60px */
+    font-weight: 400;
+    letter-spacing: 3.5rem; /* = 35px */
+    animation-name: moveToRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* animation-delay: 5s;
+    animation-iteration-count: 2;
+   */
+  }
+
+  &--sub {
+    display: block;
+    font-size: 2rem; /* = 20px */
+    font-weight: 700;
+    letter-spacing: 1.75rem; /* = 17.4px */
+    animation-name: moveToLeft;
+    animation-duration: 1s;
+  }
+
+  
 }
-.heading-primary--main {
-  display: block;
-  font-size: 6rem; /* = 60px */
-  font-weight: 400;
-  letter-spacing: 3.5rem; /* = 35px */
-  animation-name: moveToRight;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  /* animation-delay: 5s;
-  animation-iteration-count: 2;
- */
-}
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem; /* = 20px */
-  font-weight: 700;
-  letter-spacing: 1.75rem; /* = 17.4px */
-  animation-name: moveToLeft;
-  animation-duration: 1s;
-}
+
 @keyframes moveToRight {
   0% {
     opacity: 0;
