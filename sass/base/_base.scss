@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /* we will put it instead in body to apply inheritance */
+}
+html {
+  // it isn't typography as this defines what 1rem is
+
+  font-size: 62.5%; /*now it means 10/16*100 1rem =10px from 16px the default measure of the browser*/
+  /* font-size: 10px; now it means 1rem =10px */
+}
+body {
+  box-sizing: border-box; /*to apply inheritance */
+}
