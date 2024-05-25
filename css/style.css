@@ -124,6 +124,10 @@ body {
 .u-margin-top-huge {
   margin-top: 10rem; }
 
+.bg-video__content {
+  width: 100%;
+  background-size: cover; }
+
 .btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
