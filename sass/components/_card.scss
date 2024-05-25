@@ -70,10 +70,24 @@
       clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
     }
     &--2 {
-      background-image: url(../../img/nat-5.jpg);
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url(../../img/nat-6.jpg);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
     }
     &--3 {
-      background-image: url(../../img/nat-5.jpg);
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        ),
+        url(../../img/nat-7.jpg);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
     }
   }
   &__heading {
@@ -98,13 +112,26 @@
         rgba($color-secondary-dark, 0.85)
       );
     }
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
+      );
+    }
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 0.85),
+        rgba($color-tertiary-dark, 0.85)
+      );
+    }
   }
   &__details {
     padding: 3rem;
     ul {
       width: 80%;
       margin: 0 auto;
-      text-align: center;
       list-style: none;
       li {
         font-size: 1.5rem;
@@ -122,7 +149,6 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
     width: 90%;
   }
   &__price-box {
